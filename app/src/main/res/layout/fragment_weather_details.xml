@@ -1,0 +1,132 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp"
+    tools:context="vn.artcraft.weather.ui.fragment.WeatherDetailsFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_location"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/location_icon"
+            android:scaleType="center"
+            android:src="@drawable/ic_location_pointer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:tint="@color/primary_text"/>
+
+        <TextView
+            android:id="@+id/txv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/img_location" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_condition"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/condition_image_description"
+            app:layout_constraintTop_toBottomOf="@+id/txv_location" />
+
+        <TextView
+            android:id="@+id/txv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_vertical"
+            android:text="@string/not_available"
+            android:textSize="64sp"
+            app:layout_constraintStart_toEndOf="@+id/img_condition"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="88dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-thin"
+            android:gravity="center_vertical"
+            android:text="@string/unit_c"
+            android:textSize="64sp"
+            app:layout_constraintStart_toEndOf="@+id/txv_temperature"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_humidity"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/location_icon"
+            android:scaleType="center"
+            android:src="@drawable/ic_humidity"
+            android:tint="@color/primary_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txv_temperature" />
+
+        <TextView
+            android:id="@+id/txv_humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/img_humidity"
+            app:layout_constraintTop_toBottomOf="@+id/txv_temperature" />
+
+        <TextView
+            android:id="@+id/txv_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:textColor="@color/secondary_text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_humidity" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/img_update"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/update_icon"
+            android:scaleType="center"
+            android:src="@drawable/ic_update_arrows"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txv_last_updated"
+            android:tint="@color/secondary_text" />
+
+        <TextView
+            android:id="@+id/txv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:textColor="@color/primary_text"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txv_temperature" />
+
+        <TextView
+            android:id="@+id/txv_last_updated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/not_available"
+            android:textColor="@color/secondary_text"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
+
